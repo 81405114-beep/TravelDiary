@@ -3,14 +3,14 @@
 
 {% block content %}
   <div class="card">
-    <h1 class="page-title">Delete Post</h1>
-    <p>Are you sure you want to delete <b>"{{ object.title }}"</b>?</p>
+    <h1 class="page-title">刪除貼文</h1>
+    <p>你確定要刪除這篇貼文嗎? <b>"{{ object.title }}"</b>?</p>
 
     <form method="post">
       {% csrf_token %}
       <div class="actions">
-        <button class="btn btn-danger" type="submit">Yes, delete</button>
-        <a class="btn" href="{% url 'post_detail' object.pk %}">Cancel</a>
+        <button class="btn btn-danger" type="submit">是</button>
+        <a class="btn" href="{% url 'post_detail' object.pk %}">取消</a>
       </div>
     </form>
   </div>

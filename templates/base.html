@@ -49,7 +49,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand fw-semibold" href="{% url 'home' %}">
-        TravelDiary<span class="brand-dot">.</span>
+        旅行日記<span class="brand-dot">.</span>
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -59,24 +59,24 @@
       <div id="nav" class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto gap-lg-1">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Home</a>
+            <a class="nav-link" href="{% url 'home' %}">首頁</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'post_list' %}">Posts</a>
+            <a class="nav-link" href="{% url 'post_list' %}">查看貼文</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            <a class="nav-link" href="{% url 'contact' %}">聯絡人</a>
           </li>
 
           {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'post_create' %}">+ New</a>
+              <a class="nav-link" href="{% url 'post_create' %}">新增貼文</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'my_posts' %}">My Posts</a>
+              <a class="nav-link" href="{% url 'my_posts' %}">我的貼文</a>
             </li>
           {% endif %}
         </ul>
@@ -89,11 +89,11 @@
 
             <form method="post" action="{% url 'logout' %}">
               {% csrf_token %}
-              <button class="btn btn-outline-light btn-sm" type="submit">Logout</button>
+              <button class="btn btn-outline-light btn-sm" type="submit">登出</button>
             </form>
           {% else %}
-            <a class="btn btn-outline-light btn-sm" href="{% url 'login' %}">Login</a>
-            <a class="btn btn-warning btn-sm" href="{% url 'signup' %}">Sign up</a>
+            <a class="btn btn-outline-light btn-sm" href="{% url 'login' %}">登入</a>
+            <a class="btn btn-warning btn-sm" href="{% url 'signup' %}">註冊帳號</a>
           {% endif %}
         </div>
       </div>
@@ -115,17 +115,17 @@
       <div class="row g-4">
 
         <div class="col-md-4">
-          <h5 class="fw-semibold mb-2">TravelDiary</h5>
+          <h5 class="fw-semibold mb-2">關於本站</h5>
           <p class="small text-muted mb-0">
-            A simple travel blog where users share journeys, memories, and experiences.
+            這是一個簡易的網頁，可以讓您分享旅行中的點點滴滴。
           </p>
         </div>
 
         <div class="col-md-4">
-          <h6 class="fw-semibold mb-2">Contact</h6>
+          <h6 class="fw-semibold mb-2">聯絡我們</h6>
           <div class="small">
-            <div>Phone: <span class="text-muted">+886-900-000-000</span></div>
-            <div>Email: <span class="text-muted">support@traveldiary.com</span></div>
+            <div>聯絡電話: <span class="text-muted">+886-XXX-XXX-XXX</span></div>
+            <div>聯絡信箱: <span class="text-muted">support@traveldiary.com</span></div>
             <div class="mt-2">
               Address:<br>
               <span class="text-muted">
@@ -137,7 +137,7 @@
         </div>
 
         <div class="col-md-4">
-          <h6 class="fw-semibold mb-2">Follow Us</h6>
+          <h6 class="fw-semibold mb-2">訂閱我們</h6>
 
           <div class="d-flex flex-wrap gap-2 mb-3">
             <a class="btn btn-outline-light btn-sm" href="#">Facebook</a>
@@ -146,7 +146,7 @@
           </div>
 
           <div class="small">
-            <a class="footer-link" href="{% url 'contact' %}">Contact Us</a><br>
+            <a class="footer-link" href="{% url 'contact' %}">聯絡我們</a><br>
             <a class="footer-link" href="#">Privacy Policy</a><br>
             <a class="footer-link" href="#">Terms of Service</a>
           </div>

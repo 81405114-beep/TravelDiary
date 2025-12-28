@@ -53,10 +53,10 @@
         {% if user.is_authenticated and user == post.author %}
           <div class="mt-4 d-flex gap-2">
             <a href="{% url 'post_edit' post.pk %}" class="btn btn-outline-warning btn-sm">
-              ✏️ Edit
+              ✏️ 編輯
             </a>
             <a href="{% url 'post_delete' post.pk %}" class="btn btn-outline-danger btn-sm">
-              🗑 Delete
+              🗑 刪除
             </a>
           </div>
         {% endif %}
@@ -68,6 +68,6 @@
 </div>
 
 <a href="{% url 'post_list' %}" class="btn btn-link mt-3">
-  ← Back to posts
+  ← 回到查看貼文
 </a>
 {% endblock %}
